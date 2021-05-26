@@ -1,199 +1,71 @@
-# wiser-api
+# Wiser-by-Feller RESTFul API Overview
 
-More information can be found on https://wiser.feller.ch/
+> 🐮 Hi, my name is **Lapi**, I'm a happy swiss-cow! I am glad that you find the long way here! I will take you on my back and guide you through this wired documentation.
 
+The Wiser-by-Feller RESTFul API enables you to manage all your system devices.
 
-## Control your wiser system over the local API
-![Wiser Installation](doc/images/wiser_api_home.png)
+Per example, is possible to turn on or off the lights in your house over the RESTFul API. You can get the state of the lights and do other crazy IoThings.
 
+> 🐮 Wow sounds great, I would like to turn off the bell on my neck!
 
-### Manage your loads via the RESTful API
+More information can be found on https://wiser.feller.ch
 
-#### GET /loads
+## Control your Wiser-by-Feller system over the RESTFul API
 
-The loads services provides access to all loads (lights & blinds) of your installation.
+![Wiser Installation](./doc/images/wiser_api_home.png)
 
-**Example Request:**
-```
-GET api/loads HTTP/1.1
-```
-
-**Example Response:**
-```
-HTTP/1.1 200 OK
-Content-Type: application/json
-```
-``` json
-{
-  "data": [
-    {
-      "id": 1,
-      "type": "dim",
-      "name": "00012680_0",
-      "device": "00012680",
-      "channel": 0,
-      "unused": false
-    },
-    {
-      "id": 2,
-      "type": "motor",
-      "name": "0000138a_0",
-      "device": "0000138a",
-      "channel": 0,
-      "unused": false
-    },
-    {
-      "id": 3,
-      "type": "onoff",
-      "name": "0000138a_1",
-      "device": "0000138a",
-      "channel": 1,
-      "unused": false
-    }
-  ],
-  "status": "success"
-}
-```
+> 🐮 Looks like my cowshed!
 
 
-#### GET /loads/state
-**Example Request:**
-```
-GET /api/loads/state
-```
+# Get started
 
-**Example Response:**
-``` json
-{
-  "data": [
-    {
-      "id": 1,
-      "state": {
-        "level": 8160,
-        "tilt": 0,
-        "moving": "stop",
-        "flags": {
-          "direction": 0,
-          "learning": 0,
-          "moving": 0,
-          "under_current": 0,
-          "over_current": 0,
-          "timeout": 0,
-          "locked": 0
-        }
-      }
-    },
-    {
-      "id": 2,
-      "state": {
-        "bri": 0,
-        "flags": {
-          "over_current": 0,
-          "fading": 0,
-          "noise": 0,
-          "direction": 0,
-          "over_temperature": 0
-        }
-      }
-    },
-    {
-      "id": 3,
-      "state": {
-        "bri": 10000
-      }
-    }
-  ],
-  "status": "success"
-}
-```
+## HTTP Guidelines
 
-#### PUT /loads/< id >/target_state
+- [JSend](https://github.com/omniti-labs/jsend) - Simple JSON responses.
+- A successful request is indicated by HTTP status code: `200 OK`
+- Supported HTTP versions are: `HTTP/1.0, HTTP/1.1`
+- HTTP methods (Verbs): `GET, PUT, DELETE, POST, PATCH`
 
-Let's set the load state connected on a "onoff" output.
-
-**Example Request:**
-```
-PUT api/loads/3/target_state
-```
-``` json
-{
-  "bri": 0
-}
-```
-
-**Example Response:**
-``` json
-{
-  "data": {
-    "id": 3,
-    "target_state": {
-      "bri": 0
-    }
-  },
-  "status": "success"
-}
-```
-
-Let's set the load state connected on a "dim" output.
-
-**Example Request:**
-```
-PUT api/loads/1/target_state
-```
-``` json
-{
-  "bri": 500
-}
-```
-
-**Example Response:**
-``` json
-{
-  "data": {
-    "id": 1,
-    "target_state": {
-      "bri": 500
-    }
-  },
-  "status": "success"
-}
-```
-
-Let's set the load state connected on a "motor" output.
-
-**Example Request:**
-```
-PUT api/loads/2/target_state
-```
-``` json
-{
-  "level": 200,
-  "tilt": 2
-}
-```
-
-**Example Response:**
-``` json
-{
-  "data": {
-    "id": 2,
-    "target_state": {
-      "level": 200,
-      "tilt": 2
-    }
-  },
-  "status": "success"
-}
-```
+> 🐮 `GET` fresh grass, `PUT` out smelly cowpie! This is a real status code: `200 OK`!
 
 
-#### PUT /loads/< id >/ctrl
-**Example Request:**
-```
-GET /api/loads/6/ctrl
-```
+## Authentication
 
-**Example Response:**
-``` json
+Every request to the Wiser-uGateway must include an authentication token.
+
+Read [here](./doc/authentication.md) how you get an authentication token.
+
+
+> 🐮 The burn mark (a QR-code) on my back! 
+
+## Access to data
+
+ - If you want to turn **on** or **off** some lights, read more about [loads](./doc/loads.md)
+ - [TODO or !TODO]
+
+> 🐮 Please no more loads, your heavy enough!
+
+## Tools
+
+ - cUrl
+ - Postman
+ - Python
+ - ...
+
+> 🐮 The dairy machine, GPS-Receiver, ...
+
+
+# The End
 
 ```
+ _________
+< Finally >
+ ---------
+        \   ^__^
+         \  (**)\_______
+            (__)\       )\/\
+             U  ||----w |
+                ||     ||
+
+```
+Made with ❤️ (and some couples of 🍺) in Switzerland, Feller AG, 2021
