@@ -108,14 +108,82 @@ GET /api/loads/state
 ```
 
 #### PUT /loads/< id >/target_state
+
+Let's set the load state connected on a "onoff" output.
+
 **Example Request:**
 ```
-GET api/loads/6/target_state
+PUT api/loads/3/target_state
+```
+``` json
+{
+  "bri": 0
+}
 ```
 
 **Example Response:**
 ``` json
+{
+  "data": {
+    "id": 3,
+    "target_state": {
+      "bri": 0
+    }
+  },
+  "status": "success"
+}
+```
 
+Let's set the load state connected on a "dim" output.
+
+**Example Request:**
+```
+PUT api/loads/1/target_state
+```
+``` json
+{
+  "bri": 500
+}
+```
+
+**Example Response:**
+``` json
+{
+  "data": {
+    "id": 1,
+    "target_state": {
+      "bri": 500
+    }
+  },
+  "status": "success"
+}
+```
+
+Let's set the load state connected on a "motor" output.
+
+**Example Request:**
+```
+PUT api/loads/2/target_state
+```
+``` json
+{
+  "level": 200,
+  "tilt": 2
+}
+```
+
+**Example Response:**
+``` json
+{
+  "data": {
+    "id": 2,
+    "target_state": {
+      "level": 200,
+      "tilt": 2
+    }
+  },
+  "status": "success"
+}
 ```
 
 
