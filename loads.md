@@ -10,17 +10,19 @@ The loads services provides access to all loads (lights & blinds) of your instal
 
 This example demonstrates how to get all loads (lights & blinds) of your installation.
 
-**Example Request:**
-```
+**Request header:**
+``` http
 GET /api/loads HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 
-**Example Response:**
-```
+**Response body:**
+``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
+
 ``` json
 {
   "data": [
@@ -56,10 +58,11 @@ Content-Type: application/json
 
 ## GET /api/loads/state
 
-**Example Request:**
-```
-GET /api/loads/state
+**Request header:**
+``` http
+GET /api/loads/state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 
 **Example Response:**
@@ -107,13 +110,15 @@ Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 }
 ```
 
-#### PUT /api/loads/< id >/target_state
+## PUT /api/loads/< id >/target_state
 
-Let's set the load state connected on a "onoff" output.
+Let's set the load state connected on a `onoff` output.
 
-**Example Request:**
-```
-PUT api/loads/3/target_state
+**Request header:**
+``` http
+PUT api/loads/3/target_state HTTP/1.1
+Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 ``` json
 {
@@ -121,7 +126,7 @@ PUT api/loads/3/target_state
 }
 ```
 
-**Example Response:**
+**Response body:**
 ``` json
 {
   "data": {
@@ -134,11 +139,13 @@ PUT api/loads/3/target_state
 }
 ```
 
-Let's set the load state connected on a "dim" output.
+Let's set the load state connected on a `dim` output.
 
-**Example Request:**
-```
-PUT api/loads/1/target_state
+**Request header:**
+``` http
+PUT api/loads/1/target_state HTTP/1.1
+Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 ``` json
 {
@@ -146,7 +153,7 @@ PUT api/loads/1/target_state
 }
 ```
 
-**Example Response:**
+**Response body:**
 ``` json
 {
   "data": {
@@ -159,11 +166,13 @@ PUT api/loads/1/target_state
 }
 ```
 
-Let's set the load state connected on a "motor" output.
+Let's set the load state connected on a `motor` output.
 
-**Example Request:**
-```
-PUT api/loads/2/target_state
+**Request header:**
+``` http
+PUT api/loads/2/target_state HTTP/1.1
+Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 ``` json
 {
@@ -172,7 +181,7 @@ PUT api/loads/2/target_state
 }
 ```
 
-**Example Response:**
+**Response body:**
 ``` json
 {
   "data": {
@@ -187,13 +196,16 @@ PUT api/loads/2/target_state
 ```
 
 
-#### PUT /api/loads/< id >/ctrl
-**Example Request:**
-```
-GET /api/loads/6/ctrl
+## PUT /api/loads/< id >/ctrl
+
+**Request header:**
+``` http
+GET /api/loads/6/ctrl HTTP/1.1
+Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 
-**Example Response:**
+**Response body:**
 ``` json
 
 ```

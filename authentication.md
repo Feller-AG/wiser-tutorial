@@ -12,12 +12,13 @@ On sucessfully claiming, you will receive an authenication token that you can us
 
 This example demostrate, that the RESTful API is still locked.
 
-**Example Request:**
-```
-GET /api/loads
+**Request header :**
+``` http
+GET /api/loads HTTP/1.1
+host: example.com
 ```
 
-**Example Response:**
+**Response body:**
 ``` json
 {
   "message":"api is locked, log in to receive an authentication cookie OR unlock the device.",
@@ -36,34 +37,54 @@ For a valid request, one of the physical buttons has to be pressed within 30 sec
 
 1) Create a new user
 
-    **Example Request:**
-    ``` json
-    POST /api/account/claim
+    **Request header:**
+    ```http 
+    POST /api/account/claim HTTP/1.1
     Content-Type: application/json
-
+    host: example.com
+    ```
+    **Request body:**
+    ``` json
     {
       "user": "apiuser"
     }
     ```
 
+    **Request body payload:**
+    Property | Type | Description
+    --- | --- | ---
+    user | `string` | user name
+
+
 2) Press any of the physical buttons of the Wiser-uGateway
 
-    [PICTURE]
+    [TODO INSERT PICTURE]
 
 
 3) Get the resonse
 
-    **Example Response:**
+    **Response header:**
+    ``` http
+    Content-Type: application/json
+    ```
+
+    **Response body:**
     ``` json
     {
-        "data": {
-            "user": "apiuser",
-            "secret": "60650cf4-5d26-4294-b1f2-6c06adc9d0d8"
-        },
-        "status": "success"
+      "data": {
+        "user": "apiuser",
+        "secret": "60650cf4-5d26-4294-b1f2-6c06adc9d0d8"
+      },
+      "status": "success"
     }
     ```
-    > The JSON attribute `secret` contains the authentication token.
+
+    **Response body payload:**
+
+    Property | Type | Description
+    --- | --- | ---
+    user | `string` | user name
+    secret | `string` | authentication token
 
 
 ## Using the authentication code
@@ -72,17 +93,25 @@ The authentication token (also called Bearer authentication) is used in the HTTP
 
 The client must send this token in the HTTP `Authorization` header when making requests:
 
-    Authorization: Bearer <token>
+``` http
+Authorization: Bearer <token>
+```
 
 The following example demonstrates how to get all [loads](./loads.md) (lights & blinds) of your installation using the authentication token.
 
-**Example Request:**
-```
-GET /api/loads
+**Request header:**
+``` http
+GET /api/loads HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+host: example.com
 ```
 
-**Example Response:**
+**Response header:**
+``` http
+Content-Type: application/json
+```
+
+**Response body:**
 ``` json
 {
   "data": [
