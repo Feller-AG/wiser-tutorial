@@ -17,12 +17,13 @@ Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 host: example.com
 ```
 
-**Response body:**
+**Response header:**
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
+**Response body:**
 ``` json
 {
   "data": [
@@ -65,7 +66,13 @@ Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 host: example.com
 ```
 
-**Example Response:**
+**Response header:**
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+**Response body:**
 ``` json
 {
   "data": [
@@ -120,10 +127,18 @@ PUT api/loads/3/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 host: example.com
 ```
+
+**Request body:**
 ``` json
 {
   "bri": 0
 }
+```
+
+**Response header:**
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
 ```
 
 **Response body:**
@@ -147,10 +162,18 @@ PUT api/loads/1/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 host: example.com
 ```
+
+**Request body:**
 ``` json
 {
   "bri": 500
 }
+```
+
+**Response header:**
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
 ```
 
 **Response body:**
@@ -181,6 +204,12 @@ host: example.com
 }
 ```
 
+**Response header:**
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
 **Response body:**
 ``` json
 {
@@ -203,6 +232,12 @@ host: example.com
 GET /api/loads/6/ctrl HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 host: example.com
+```
+
+**Response header:**
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
 ```
 
 **Response body:**
