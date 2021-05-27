@@ -2,9 +2,11 @@
 
 ## Overview
 
-The loads services provides access to all loads (lights & blinds) of your installation.
+The loads services provides access to all loads (e.g. lights, blinds) of your installation.
 
- > Do not forget to include an authentication token in all your requests! Read more about [here](./authentication.md).
+**Do not forget to include the [authentication token](./authentication.md) in all your requests!**
+
+> 🐮 Help! I need somebody [Help](./faq_loads.md) !
 
 ## GET /api/loads
 
@@ -32,17 +34,17 @@ Content-Type: application/json
   "data": [
     {
       "id": 1,
-      "type": "dim",
-      "name": "00012680_0",
-      "device": "00012680",
+      "type": "motor",
+      "name": "0000138a_0",
+      "device": "0000138a",
       "channel": 0,
       "unused": false
     },
     {
       "id": 2,
-      "type": "motor",
-      "name": "0000138a_0",
-      "device": "0000138a",
+      "type": "dim",
+      "name": "00012680_0",
+      "device": "00012680",
       "channel": 0,
       "unused": false
     },

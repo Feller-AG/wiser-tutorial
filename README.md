@@ -16,6 +16,10 @@ More information can be found on https://wiser.feller.ch
 
 > 🐮 Looks like my cowshed!
 
+## FAQ
+
+- What do you mean?  Read [here](./doc/faq.md)
+
 ## Get started
 
 ### HTTP Guidelines
@@ -37,7 +41,7 @@ Read [here](./doc/authentication.md) how you get an authentication token.
 
 ### Access to data
 
-- If you want to turn **on** or **off** some lights, read more about [loads](./doc/loads.md)
+- If you want to turn **on** or **off** some lights, read more about [loads](./doc/api_loads.md)
 - [TODO or !TODO]
 
 > 🐮 Please no more loads, your heavy enough!
