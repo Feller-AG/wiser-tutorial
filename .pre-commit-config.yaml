@@ -1,0 +1,21 @@
+# ReadMe:
+# - General: https://pre-commit.com
+# - Supported hooks: https://pre-commit.com/hooks.html
+#
+# Known Errors:
+# - On error '... .pre-commit-hooks.yaml does not exist', check that the GIT-repo
+#   with the version 'rev' contain a file named ".pre-commit-hooks.yaml"!
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1 # Use the 'rev' you want to point at
+    hooks:
+    -   id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+    -   id: mixed-line-ending
+    -   id: end-of-file-fixer
+
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.27.1
+  hooks:
+  - id: markdownlint
