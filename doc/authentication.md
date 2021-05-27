@@ -5,12 +5,12 @@
 Before you can use the RESTful API you need to create an authentication token
 This will enable you the access of the RESTful API.
 
-On sucessfully claiming, you will receive an authenication token that you can use in your API requests.
+On successfully claiming, you will receive an authentication token that you can use in your API requests.
 
 
 ### Example of a locked API
 
-This example demostrate, that the RESTful API is still locked.
+This example demonstrate, that the RESTful API is still locked.
 
 **Request header :**
 ``` http
@@ -38,7 +38,7 @@ For a valid request, one of the physical buttons has to be pressed within 30 sec
 1) Create a new user
 
     **Request header:**
-    ```http 
+    ```http
     POST /api/account/claim HTTP/1.1
     Content-Type: application/json
     host: example.com
@@ -61,7 +61,7 @@ For a valid request, one of the physical buttons has to be pressed within 30 sec
     [TODO INSERT PICTURE]
 
 
-3) Get the resonse
+3) Get the response
 
     **Response header:**
     ``` http
