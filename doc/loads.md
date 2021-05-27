@@ -11,6 +11,7 @@ The loads services provides access to all loads (lights & blinds) of your instal
 This example demonstrates how to get all loads (lights & blinds) of your installation.
 
 **Request header:**
+
 ``` http
 GET /api/loads HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
@@ -18,12 +19,14 @@ host: example.com
 ```
 
 **Response header:**
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
 **Response body:**
+
 ``` json
 {
   "data": [
@@ -56,10 +59,10 @@ Content-Type: application/json
 }
 ```
 
-
 ## GET /api/loads/state
 
 **Request header:**
+
 ``` http
 GET /api/loads/state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
@@ -67,12 +70,14 @@ host: example.com
 ```
 
 **Response header:**
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
 **Response body:**
+
 ``` json
 {
   "data": [
@@ -122,6 +127,7 @@ Content-Type: application/json
 Let's set the load state connected on a `onoff` output.
 
 **Request header:**
+
 ``` http
 PUT api/loads/3/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
@@ -129,6 +135,7 @@ host: example.com
 ```
 
 **Request body:**
+
 ``` json
 {
   "bri": 0
@@ -136,12 +143,14 @@ host: example.com
 ```
 
 **Response header:**
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
 **Response body:**
+
 ``` json
 {
   "data": {
@@ -157,6 +166,7 @@ Content-Type: application/json
 Let's set the load state connected on a `dim` output.
 
 **Request header:**
+
 ``` http
 PUT api/loads/1/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
@@ -164,6 +174,7 @@ host: example.com
 ```
 
 **Request body:**
+
 ``` json
 {
   "bri": 500
@@ -171,12 +182,14 @@ host: example.com
 ```
 
 **Response header:**
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
 **Response body:**
+
 ``` json
 {
   "data": {
@@ -192,11 +205,13 @@ Content-Type: application/json
 Let's set the load state connected on a `motor` output.
 
 **Request header:**
+
 ``` http
 PUT api/loads/2/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
 host: example.com
 ```
+
 ``` json
 {
   "level": 200,
@@ -205,12 +220,14 @@ host: example.com
 ```
 
 **Response header:**
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
 **Response body:**
+
 ``` json
 {
   "data": {
@@ -224,10 +241,10 @@ Content-Type: application/json
 }
 ```
 
-
 ## PUT /api/loads/< id >/ctrl
 
 **Request header:**
+
 ``` http
 GET /api/loads/6/ctrl HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
@@ -235,12 +252,14 @@ host: example.com
 ```
 
 **Response header:**
+
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ```
 
 **Response body:**
+
 ``` json
 
 ```
