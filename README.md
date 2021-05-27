@@ -16,10 +16,9 @@ More information can be found on https://wiser.feller.ch
 
 > 🐮 Looks like my cowshed!
 
+## Get started
 
-# Get started
-
-## HTTP Guidelines
+### HTTP Guidelines
 
 - [JSend](https://github.com/omniti-labs/jsend) - Simple JSON responses.
 - A successful request is indicated by HTTP status code: `200 OK`
@@ -28,36 +27,33 @@ More information can be found on https://wiser.feller.ch
 
 > 🐮 `GET` fresh grass, `PUT` out smelly cowpie! This is a real status code: `200 OK`!
 
-
-## Authentication
+### Authentication
 
 Every request to the Wiser-uGateway must include an authentication token.
 
 Read [here](./doc/authentication.md) how you get an authentication token.
 
+> 🐮 The burn mark (a QR-code) on my back!
 
-> 🐮 The burn mark (a QR-code) on my back! 
+### Access to data
 
-## Access to data
-
- - If you want to turn **on** or **off** some lights, read more about [loads](./doc/loads.md)
- - [TODO or !TODO]
+- If you want to turn **on** or **off** some lights, read more about [loads](./doc/loads.md)
+- [TODO or !TODO]
 
 > 🐮 Please no more loads, your heavy enough!
 
 ## Tools
 
- - cUrl
- - Postman
- - Python
- - ...
+- cUrl
+- Postman
+- Python
+- ...
 
 > 🐮 The dairy machine, GPS-Receiver, ...
 
+## The End
 
-# The End
-
-```
+``` bash
  _________
 < Finally >
  ---------
@@ -66,6 +62,6 @@ Read [here](./doc/authentication.md) how you get an authentication token.
             (__)\       )\/\
              U  ||----w |
                 ||     ||
-
 ```
-Made with ❤️ (and some couples of 🍺) in Switzerland, Feller AG, 2021
+
+Made with ❤️ (and some couples of 🍺) in Switzerland, Feller AG, 202
