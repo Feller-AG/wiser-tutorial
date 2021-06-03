@@ -1,6 +1,6 @@
 # Wiser-by-Feller RESTFul API Overview
 
-> 🐮 Hi, my name is **Lapi**, I'm a happy swiss-cow! I am glad that you find the long way here! I will take you on my back and guide you through this wired documentation.
+> 🐮 Hi, my name is **Lapi**, I'm a happy swiss-cow! I am glad that you find the long way here! I will take you on my back and guide you through this weird documentation.
 
 The Wiser-by-Feller RESTFul API enables you to manage all your system devices.
 
@@ -68,4 +68,4 @@ Read [here](./doc/authentication.md) how you get an authentication token.
                 ||     ||
 ```
 
-Made with ❤️ (and some couples of 🍺) in Switzerland, Feller AG, 202
+Made with ❤️ (and some couples of 🍺) in Switzerland, Feller AG, 2021
