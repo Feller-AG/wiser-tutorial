@@ -57,9 +57,9 @@ For a valid request, one of the physical buttons has to be pressed within 30 sec
     --- | --- | ---
     user | `string` | user name
 
-2) Press any of the physical buttons of the Wiser-uGateway
+2) Press any of the physical buttons of the Wiser-uGateway (LEDs are blinking with color blue/purple)
 
-    [TODO INSERT PICTURE]
+    [TODO: INSERT PICTURE]
 
 3) Get the response
 
@@ -98,7 +98,7 @@ The client must send this token in the HTTP `Authorization` header when making r
 Authorization: Bearer <token>
 ```
 
-The following example demonstrates how to get all [loads](./loads.md) (lights & blinds) of your installation using the authentication token.
+The following example demonstrates how to get all [loads](./api_loads.md) (lights & blinds) of your installation using the authentication token.
 
 **Request header:**
 
@@ -121,28 +121,29 @@ Content-Type: application/json
   "data": [
     {
       "id": 1,
-      "type": "dim",
-      "name": "00012680_0",
-      "device": "00012680",
+      "type": "onoff",
+      "name": "0000133a_0",
+      "device": "0000133a",
       "channel": 0,
       "unused": false
     },
     {
       "id": 2,
-      "type": "motor",
-      "name": "0000138a_0",
-      "device": "0000138a",
+      "type": "dim",
+      "name": "0000144b_0",
+      "device": "0000144b",
       "channel": 0,
       "unused": false
     },
     {
       "id": 3,
-      "type": "onoff",
-      "name": "0000138a_1",
-      "device": "0000138a",
-      "channel": 1,
+      "type": "motor",
+      "name": "0000155c_0",
+      "device": "0000155c",
+      "channel": 0,
       "unused": false
     }
   ],
   "status": "success"
 }
+```
