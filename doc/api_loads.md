@@ -315,6 +315,7 @@ Let's control the load of an `onoff` type.
     --- | ---
     button | `on`
     event | `click`
+
 - To turn **off** the light set the following attributes:
 
     Attribute | Value
@@ -361,3 +362,145 @@ Content-Type: application/json
   }
 }
 ```
+
+### Example `dim` type (using ctrl)
+
+Let's control the load of a `dim` type.
+
+A dimmable light can be turned on (100%) or off (0%) on short button-click.
+If the button is pressed the dimmable light start to fade until the button is release.
+
+- To turn **on** a dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `click`
+
+- To turn **off** the dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `click`
+
+- To fade **up** a dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `press`
+
+    Wait shortly and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `release`
+
+- To fade **down** a dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `press`
+
+    Wait shortly and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `release`
+
+### Example `motor` type (using ctrl)
+
+Let's control the load of a `motor` type.
+
+On short button-click the slats of the shutter tilts one step (up/down).
+
+If the button is pressed for a while and then released the motor e.g. shutter/blind starts moving (up/down) until reaching the end position.
+During the motor is moving it's possible to stop it with a short button-click.
+
+- To tilt **up** the slats of the shutter set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `click`
+
+- To tilt **down** the slats of the shutter set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `click`
+
+- To move **up** a motor until reaching the end position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `release`
+
+- To move **down** a motor until reaching the end position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `release`
+
+- To move **up** a motor until reaching the favorite position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `release`
+
+    Wait until the motor reaching the favorite position and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `click`
+
+- To move **down** a motor until reaching your favorite position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `release`
+
+    Wait until the motor e.g. shutter/blind reach your favorite position and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `click`
