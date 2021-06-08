@@ -157,6 +157,7 @@ To turn **on** or **off** a load set the attribute `bri` (brightness) to the fol
 ``` http
 PUT /api/loads/1/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -203,6 +204,7 @@ On a dimmable light you can set the target brightness between 0% and 100% (0 - 1
 ``` http
 PUT /api/loads/2/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -256,6 +258,7 @@ On a motor e.g. shutter/blind you can set the target level between 0% and 100% (
 ``` http
 PUT /api/loads/3/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -343,6 +346,7 @@ To turn **on** or **off** using `button` and `event` attributes:
 ``` http
 PUT /api/loads/1/ctrl HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
