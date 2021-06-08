@@ -295,6 +295,8 @@ Content-Type: application/json
 
 ## PUT /api/loads/< id >/ctrl
 
+Possible button types: `on, off, up, down, toggle`
+
 Possible button events:
 
 Event | Description
@@ -303,43 +305,22 @@ click | if the button was pressed shorter than 500ms
 press | if the button was pressed 500ms or longer
 release | must follow after a pressed event
 
-Possible button types:
-
-``` INI
-button "on" for buttons like:
-+-----+
-|  I  |
-+-----+
-
-button "off" for buttons like:
-+-----+
-|  0  |
-+-----+
-
-button "up" for buttons like:
-+-----+  +-----+
-|  +  |  |  ^  |
-+-----+  +-----+
-
-button "down" for buttons like:
-+-----+  +-----+
-|  -  |  |  v  |
-+-----+  +-----+
-
-button "toggle" for buttons like:
-+-----+
-| I/0 |
-+-----+
-```
-
 ### Example `onoff` type (using ctrl)
 
 Let's control the load of an `onoff` type.
 
-To turn **on** or **off** using `button` and `event` attributes:
+- To turn **on** the light set the following attributes:
 
-- Turn **on** set the `button` attribute to `on` and `event` attribute to `click`
-- Turn **off** set the `button` attribute to `off` and `event` attribute to `click`
+    Attribute | Value
+    --- | ---
+    button | `on`
+    event | `click`
+- To turn **off** the light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `off`
+    event | `click`
 
 **Request header:**
 

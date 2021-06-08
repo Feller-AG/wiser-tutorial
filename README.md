@@ -48,7 +48,7 @@ Read [here](./doc/authentication.md) how you get an authentication token.
 
 ## Tools
 
-- [cURL](./doc/tool_curl.md)
+- Examples using [cURL](./doc/tool_curl.md)
 
 > 🐮 The dairy machine, GPS-Receiver, ...
 

@@ -37,7 +37,7 @@ curl -X 'POST' \
 }
 ```
 
-**Set authentication code:**
+**Set authentication token:**
 
 ``` bash
 export GATEWAY_TOKEN="60650cf4-5d26-4294-b1f2-6c06adc9d0d8"
