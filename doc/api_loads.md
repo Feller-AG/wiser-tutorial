@@ -157,6 +157,7 @@ To turn **on** or **off** a load set the attribute `bri` (brightness) to the fol
 ``` http
 PUT /api/loads/1/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -203,6 +204,7 @@ On a dimmable light you can set the target brightness between 0% and 100% (0 - 1
 ``` http
 PUT /api/loads/2/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -256,6 +258,7 @@ On a motor e.g. shutter/blind you can set the target level between 0% and 100% (
 ``` http
 PUT /api/loads/3/target_state HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -292,6 +295,8 @@ Content-Type: application/json
 
 ## PUT /api/loads/< id >/ctrl
 
+Possible button types: `on, off, up, down, toggle`
+
 Possible button events:
 
 Event | Description
@@ -300,49 +305,30 @@ click | if the button was pressed shorter than 500ms
 press | if the button was pressed 500ms or longer
 release | must follow after a pressed event
 
-Possible button types:
-
-``` INI
-button "on" for buttons like:
-+-----+
-|  I  |
-+-----+
-
-button "off" for buttons like:
-+-----+
-|  0  |
-+-----+
-
-button "up" for buttons like:
-+-----+  +-----+
-|  +  |  |  ^  |
-+-----+  +-----+
-
-button "down" for buttons like:
-+-----+  +-----+
-|  -  |  |  v  |
-+-----+  +-----+
-
-button "toggle" for buttons like:
-+-----+
-| I/0 |
-+-----+
-```
-
 ### Example `onoff` type (using ctrl)
 
 Let's control the load of an `onoff` type.
 
-To turn **on** or **off** using `button` and `event` attributes:
+- To turn **on** the light set the following attributes:
 
-- Turn **on** set the `button` attribute to `on` and `event` attribute to `click`
-- Turn **off** set the `button` attribute to `off` and `event` attribute to `click`
+    Attribute | Value
+    --- | ---
+    button | `on`
+    event | `click`
+
+- To turn **off** the light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `off`
+    event | `click`
 
 **Request header:**
 
 ``` http
 PUT /api/loads/1/ctrl HTTP/1.1
 Authorization: Bearer 60650cf4-5d26-4294-b1f2-6c06adc9d0d8
+Content-Type: application/json
 host: example.com
 ```
 
@@ -376,3 +362,145 @@ Content-Type: application/json
   }
 }
 ```
+
+### Example `dim` type (using ctrl)
+
+Let's control the load of a `dim` type.
+
+A dimmable light can be turned on (100%) or off (0%) on short button-click.
+If the button is pressed the dimmable light start to fade until the button is release.
+
+- To turn **on** a dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `click`
+
+- To turn **off** the dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `click`
+
+- To fade **up** a dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `press`
+
+    Wait shortly and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `release`
+
+- To fade **down** a dimmable light set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `press`
+
+    Wait shortly and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `release`
+
+### Example `motor` type (using ctrl)
+
+Let's control the load of a `motor` type.
+
+On short button-click the slats of the shutter tilts one step (up/down).
+
+If the button is pressed for a while and then released the motor e.g. shutter/blind starts moving (up/down) until reaching the end position.
+During the motor is moving it's possible to stop it with a short button-click.
+
+- To tilt **up** the slats of the shutter set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `click`
+
+- To tilt **down** the slats of the shutter set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `click`
+
+- To move **up** a motor until reaching the end position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `release`
+
+- To move **down** a motor until reaching the end position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `release`
+
+- To move **up** a motor until reaching the favorite position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `release`
+
+    Wait until the motor reaching the favorite position and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `up`
+    event | `click`
+
+- To move **down** a motor until reaching your favorite position set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `press`
+
+    Wait for a while and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `release`
+
+    Wait until the motor e.g. shutter/blind reach your favorite position and then set the following attributes:
+
+    Attribute | Value
+    --- | ---
+    button | `down`
+    event | `click`

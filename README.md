@@ -18,7 +18,7 @@ More information can be found on https://wiser.feller.ch
 
 ## FAQ
 
-- What do you mean?  Read [here](./doc/faq.md)
+- What do you mean? Read [here](./doc/faq.md)
 
 ## Get started
 
@@ -48,10 +48,7 @@ Read [here](./doc/authentication.md) how you get an authentication token.
 
 ## Tools
 
-- cUrl
-- Postman
-- Python
-- ...
+- Examples using [cURL](./doc/tool_curl.md)
 
 > 🐮 The dairy machine, GPS-Receiver, ...
 
