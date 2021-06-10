@@ -16,11 +16,9 @@ More information can be found on https://wiser.feller.ch
 
 > 🐮 Looks like my cowshed!
 
-## FAQ
-
-- What do you mean? Read [here](./doc/faq.md)
-
 ## Get started
+
+Learn about getting started with the RESTFul API, authentication and how to use it.
 
 ### HTTP Guidelines
 
@@ -33,9 +31,7 @@ More information can be found on https://wiser.feller.ch
 
 ### Authentication
 
-Every request to the Wiser-uGateway must include an authentication token.
-
-Read [here](./doc/authentication.md) how you get an authentication token.
+Every request to the Wiser-uGateway must include an [authentication](./doc/authentication.md) token.
 
 > 🐮 The burn mark (a QR-code) on my back!
 
@@ -51,6 +47,10 @@ Read [here](./doc/authentication.md) how you get an authentication token.
 - Examples using [cURL](./doc/tool_curl.md)
 
 > 🐮 The dairy machine, GPS-Receiver, ...
+
+## FAQ
+
+- What do you mean? Read [here](./doc/faq.md)
 
 ## The End
 
