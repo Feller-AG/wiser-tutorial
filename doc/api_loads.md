@@ -17,7 +17,7 @@ To modify the state of a load, there are two possibilities:
 
 ## GET /api/loads
 
-This example demonstrates how to get all loads (lights & blinds) of your installation.
+This example demonstrates how to get all connected loads (lights & blinds) of your wiser-installation.
 
 **Request header:**
 
@@ -70,7 +70,7 @@ Content-Type: application/json
 
 ## GET /api/loads/state
 
-Get all loads (lights & blinds) state of your installation.
+Get all loads (lights & blinds) state of your wiser-installation.
 
 **Request header:**
 

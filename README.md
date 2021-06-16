@@ -1,10 +1,10 @@
 # Wiser-by-Feller RESTFul API Overview
 
-> 🐮 Hi, my name is **Lapi**, I'm a happy swiss-cow! I am glad that you find the long way here! I will take you on my back and guide you through this weird documentation.
+> 🐮 Hi, my name is **Lapi**, I'm a happy swiss-cow! I am glad that you find the long way here! I will take you on my back and guide you through this wonderful documentation.
 
-The Wiser-by-Feller RESTFul API enables you to manage all your system devices.
+The Wiser-by-Feller RESTFul API enables you to manage all your **Wiser-by-Feller** system devices.
 
-Per example, is possible to turn on or off the lights in your house over the RESTFul API. You can get the state of the lights and do other crazy IoThings.
+Per example, it's possible to turn on or off the lights in your house over the RESTFul API. You can get the state of the lights and do other crazy IoThings.
 
 > 🐮 Wow sounds great, I would like to turn off the bell on my neck!
 
@@ -18,29 +18,25 @@ More information can be found on https://wiser.feller.ch
 
 ## Get started
 
-Learn about getting started with the RESTFul API, authentication and how to use it.
+Learn about getting started with the RESTFul API and how to use it.
 
-### HTTP Guidelines
+### 1) HTTP Guidelines
 
-- [JSend](https://github.com/omniti-labs/jsend) - Simple JSON responses
-- A successful request is indicated by HTTP status code: `200 OK`
-- Supported HTTP versions are: `HTTP/1.0, HTTP/1.1`
-- HTTP methods (Verbs): `GET, PUT, DELETE, POST, PATCH`
+Follow the simple [HTTP Guidelines](./doc/http_guidelines.md).
 
-> 🐮 `GET` fresh grass, `PUT` out smelly cowpie! This is a real status code: `200 OK`!
+> 🐮 I like simple guidelines!
 
-### Authentication
+### 2) Authentication
 
 Every request to the Wiser-uGateway must include an [authentication](./doc/authentication.md) token.
 
-> 🐮 The burn mark (a QR-code) on my back!
+> 🐮 The burn mark on my back!
 
-### Access to data
+### 3) Access to data
 
-- If you want to turn **on** or **off** some lights, read more about [loads](./doc/api_loads.md)
-- [TODO or !TODO]
+- If you want to turn **on** or **off** some lights, read more about [loads](./doc/api_loads.md).
 
-> 🐮 Please no more loads, your heavy enough!
+> 🐮 Please no more loads, you are heavy enough!
 
 ## Tools
 
@@ -50,7 +46,7 @@ Every request to the Wiser-uGateway must include an [authentication](./doc/authe
 
 ## FAQ
 
-- What do you mean? Read [here](./doc/faq.md)
+- What do you mean? Read [here](./doc/faq.md)!
 
 ## The End
 
@@ -65,4 +61,5 @@ Every request to the Wiser-uGateway must include an [authentication](./doc/authe
                 ||     ||
 ```
 
-Made with ❤️ (and some couples of 🍺) in Switzerland, Feller AG, 2021
+---
+Made with ❤️ & 🐮 (...and some couples of 🍺) in Switzerland, Feller AG, 2021

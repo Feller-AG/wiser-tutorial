@@ -10,7 +10,7 @@ motor | Motor used for blinds, shutters, jalousies, etc.
 
 ## What means `channel`?
 
-This means the channel (index) on the device where the load is attached (`0` for the first channel, `1` for the second channel)
+This means, the channel (index) on the device where the load is attached (`0` for the first channel, `1` for the second channel)
 
 Here some examples:
 Device Type | Device Nr. | Description
