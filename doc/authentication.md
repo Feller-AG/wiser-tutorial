@@ -59,8 +59,6 @@ For a valid request, one of the physical buttons has to be pressed within 30 sec
 
 2) Press any of the physical buttons of the Wiser-uGateway (LEDs are blinking with color blue/purple)
 
-    [TODO: INSERT PICTURE]
-
 3) Get the response
 
     **Response header:**
