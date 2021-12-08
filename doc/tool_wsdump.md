@@ -21,7 +21,7 @@ lapi@cowshed$ cd /tmp
 lapi@cowshed$ python3 -m venv ${PYVENV} && source ${PYVENV}/bin/activate && pip3 install websocket-client
 
 # Check if the tool exists
-(ws-example-venv) lapi@cowshed$ which wsdump 
+(ws-example-venv) lapi@cowshed$ which wsdump
 /tmp/ws-example-venv/bin/wsdump
 ```
 
