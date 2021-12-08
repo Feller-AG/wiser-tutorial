@@ -41,7 +41,8 @@ Every request to the Wiser-uGateway must include an [authentication](./doc/authe
 
 ## Tools
 
-- Examples using [cURL](./doc/tool_curl.md)
+- RESTFul API examples using [cURL](./doc/tool_curl.md)
+- [WebSocket](./doc/websocket.md) examples with [wsdump](./doc/tool_wsdump.md)
 
 > 🐮 The dairy machine, GPS-Receiver, ...
 
