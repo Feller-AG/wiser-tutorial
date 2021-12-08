@@ -9,15 +9,17 @@ The loads services provides access to all loads (e.g. lights, blinds) of your in
 To modify the state of a load, there are two possibilities:
 
 - Using the API `target_state`
-  - Use `target_state` to set the desired end-state of a load using a value e.g. `bri` (brightness)
+  - Use [`target_state`](#api-loads-target-state) to set the desired end-state of a load using a value e.g. `bri` (brightness)
 - Using the API `ctrl`
-  - Use `ctrl` to invoke (simulate) a button-event, e.g. `click`, `press`, `release`
+  - Use [`ctrl`](#api-loads-ctrl) to invoke (simulate) a button-event, e.g. `click`, `press`, `release`
 
 > 🐮 Help! I need somebody [Help](./faq_loads.md) !
 
-## GET /api/loads
+## API loads
 
-This example demonstrates how to get all connected loads (lights & blinds) of your wiser-installation.
+### GET /api/loads
+
+This example demonstrates how to get all connected loads (lights & blinds) of your wiser-by-feller-installation.
 
 **Request header:**
 
@@ -68,7 +70,9 @@ Content-Type: application/json
 }
 ```
 
-## GET /api/loads/state
+## API loads state
+
+### GET /api/loads/state
 
 Get all loads (lights & blinds) state of your wiser-installation.
 
@@ -133,7 +137,11 @@ Content-Type: application/json
 }
 ```
 
-## PUT /api/loads/< id >/target_state
+## API loads target state
+
+### PUT /api/loads/< id >/target_state
+
+Set the target state of a load.
 
 Possible `target_state` values per load-type:
 
@@ -143,7 +151,7 @@ onoff | `bri`
 dim | `bri`
 motor | `level`,  `tilt`
 
-### Example `onoff` type (using target_state)
+#### Example `onoff` type (using target_state)
 
 Let's set the load state of an `onoff` type.
 
@@ -190,7 +198,7 @@ Content-Type: application/json
 }
 ```
 
-### Example `dim` type (using target_state)
+#### Example `dim` type (using target_state)
 
 Let's set the load state of a `dim` type.
 
@@ -237,19 +245,19 @@ Content-Type: application/json
 }
 ```
 
-### Example `motor` type (using target_state)
+#### Example `motor` type (using target_state)
 
 Let's set the load state of a `motor` type.
 
 On a motor e.g. shutter/blind you can set the target level between 0% and 100% (0 - 10000) and a tilt value.
 
-#### Shutter position (target level)
+##### Shutter position (target level)
 
 - To set the shutter in open position set the `level` attribute to `0`
 - To set the shutter in close position set the `level` attribute to `10000`
 - To control the shutter set the `level` attribute between 1 and 10000 (e.g. set `level` to 5000, means set the shutter/blind to position 50%)
 
-#### Slats of a shutter (number of tilt)
+##### Slats of a shutter (number of tilt)
 
 - Tilt in number of `tilt` commands. Finally it's the motor running time, because we don't know the slat position in degrees
 
@@ -293,9 +301,15 @@ Content-Type: application/json
 }
 ```
 
-## PUT /api/loads/< id >/ctrl
+## API loads ctrl
+
+### PUT /api/loads/< id >/ctrl
+
+#### Button types
 
 Possible button types: `on, off, up, down, toggle`
+
+#### Button events
 
 Possible button events:
 
@@ -305,7 +319,7 @@ click | if the button was pressed shorter than 500ms
 press | if the button was pressed 500ms or longer
 release | must follow after a pressed event
 
-### Example `onoff` type (using ctrl)
+#### Example `onoff` type (using ctrl)
 
 Let's control the load of an `onoff` type.
 
@@ -363,7 +377,7 @@ Content-Type: application/json
 }
 ```
 
-### Example `dim` type (using ctrl)
+#### Example `dim` type (using ctrl)
 
 Let's control the load of a `dim` type.
 
@@ -412,7 +426,7 @@ If the button is pressed the dimmable light start to fade until the button is re
     button | `down`
     event | `release`
 
-### Example `motor` type (using ctrl)
+#### Example `motor` type (using ctrl)
 
 Let's control the load of a `motor` type.
 
