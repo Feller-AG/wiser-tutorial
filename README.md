@@ -35,12 +35,14 @@ Every request to the Wiser-uGateway must include an [authentication](./doc/authe
 ### 3) Access to data
 
 - If you want to turn **on** or **off** some lights, read more about [loads](./doc/api_loads.md).
+- Get informed about [loads](./doc/api_loads.md) state changes using [WebSocket](./doc/websocket.md).
 
 > 🐮 Please no more loads, you are heavy enough!
 
 ## Tools
 
-- Examples using [cURL](./doc/tool_curl.md)
+- RESTFul API examples using [cURL](./doc/tool_curl.md)
+- [WebSocket](./doc/websocket.md) examples with [wsdump](./doc/tool_wsdump.md)
 
 > 🐮 The dairy machine, GPS-Receiver, ...
 
