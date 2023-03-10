@@ -31,7 +31,7 @@ host: example.com
 
 This example show how to unlock the RESTful API for an user.
 
-As soon you start the request the physical buttons of the Wiser-uGateway will start flashing for 30 seconds.
+As soon you start the request the physical buttons of the Wiser-µGateway will start flashing for 30 seconds.
 For a valid request, one of the physical buttons has to be pressed within 30 seconds!
 
 1) Create a new user
@@ -57,7 +57,7 @@ For a valid request, one of the physical buttons has to be pressed within 30 sec
     --- | --- | ---
     user | `string` | user name
 
-2) Press any of the physical buttons of the Wiser-uGateway (LEDs are blinking with color blue/purple)
+2) Press any of the physical buttons of the Wiser-µGateway (LEDs are blinking with color blue/purple)
 
 3) Get the response
 

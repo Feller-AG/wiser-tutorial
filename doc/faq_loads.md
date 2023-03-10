@@ -6,6 +6,7 @@ Type | Description
 --- | ---
 onoff | Switchable light that can be turned on and off
 dim | Dimmable light
+dali | DALI / Dimmable light
 motor | Motor used for blinds, shutters, jalousies, etc.
 
 ## What means `channel`?

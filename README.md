@@ -8,7 +8,10 @@ Per example, it's possible to turn on or off the lights in your house over the R
 
 > 🐮 Wow sounds great, I would like to turn off the bell on my neck!
 
-More information can be found on https://wiser.feller.ch
+Information:
+
+- All information about **Wiser-by-Feller** can be found here: https://wiser.feller.ch
+- RestAPI information (OpenAPI): https://feller-ag.github.io/wiser-api
 
 ## Control your Wiser-by-Feller system over the RESTFul API
 
@@ -28,7 +31,7 @@ Follow the simple [HTTP Guidelines](./doc/http_guidelines.md).
 
 ### 2) Authentication
 
-Every request to the Wiser-uGateway must include an [authentication](./doc/authentication.md) token.
+Every request to the Wiser-µGateway must include an [authentication](./doc/authentication.md) token.
 
 > 🐮 The burn mark on my back!
 
@@ -36,6 +39,9 @@ Every request to the Wiser-uGateway must include an [authentication](./doc/authe
 
 - If you want to turn **on** or **off** some lights, read more about [loads](./doc/api_loads.md).
 - Get informed about [loads](./doc/api_loads.md) state changes using [WebSocket](./doc/websocket.md).
+- How about a new [job](./doc/api_jobs.md)?
+- Lets use a [smartbutton](./doc/api_smartbuttons.md) and get it married with a [job](./doc/api_jobs.md).
+- Use [scripting](./doc/api_scripts.md) to invoke actions on 3rd party devices.
 
 > 🐮 Please no more loads, you are heavy enough!
 
